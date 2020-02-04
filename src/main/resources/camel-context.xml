@@ -11,7 +11,7 @@
             <log logName="trace" loggingLevel="INFO" message="Start mainRoute"/>
             <choice>
                 <when>
-                    <simple>${exchangeProperty.operation} == 'ricerca'</simple>
+                    <simple>"${exchangeProperty.myoperation}" == 'ricerca'</simple>
                     <to uri="direct:ricerca"/>
                 </when>
             </choice>

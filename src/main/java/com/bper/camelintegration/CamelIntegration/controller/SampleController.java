@@ -55,9 +55,9 @@ public class SampleController {
         Message message = new DefaultMessage(preProcessingTemplate.getCamelContext());
         Exchange exchange = new DefaultExchange(preProcessingTemplate.getCamelContext());
         exchange.setIn(message);
-        exchange.setProperty("operation", "ricerca");
+        exchange.setProperty("myoperation", "ricerca");
 
-        preProcessingTemplate.sendBody("direct:mainRoute", exchange);
+        preProcessingTemplate.send("direct:mainRoute", exchange);
 
         return "Pooooooooooooooooooooooooooong ... " + new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(Calendar.getInstance().getTime()) + " version: " + implementationVersion+"\n";
     }
