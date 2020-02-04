@@ -19,7 +19,7 @@
 
         <route id="ricerca">
             <from uri="direct:ricerca"/>
-            <log logName="trace" loggingLevel="INFO" message="Invoke CorporteService_v1.0/ricercaConti"/>
+            <log logName="trace" loggingLevel="INFO" message="Invoke ricerca Processor"/>
             <process ref="ricercaRequestProcessor"/>
             <process ref="ricercaResponseProcessor"/>
         </route>
